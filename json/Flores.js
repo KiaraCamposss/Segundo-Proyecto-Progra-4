@@ -3,7 +3,7 @@ const flowers =
         {
             "_id": 1,
             "Nombre": "Rosa",
-            "Imagen": "../img/rosas.jpg",
+            "Imagen": "./img/rosas.jpg",
             "Precio": "2500",
             "Descripción": "Esta hermosa rosa de crochet es perfecta para cualquier ocasión. Con su delicado trabajo artesanal, añade un toque de elegancia y color a cualquier ambiente.",
             "Galeria": [
