@@ -6,6 +6,13 @@ function addToCart(element) {
 	price = price.substring(1, price.length)
 	var name = $(florParent).find('.flor-Nombre').text()
 	var quantity = $(florParent).find('.flor-quantity').val()
+
+	if (quantity < 1 || isNaN(quantity)) {
+		$.notify("Cantidad Inválida, Porfavor coloque bien la cantidad", "warn");
+		return;
+	}
+
+
 	//Item del carrito
 	var cartItem = {
 		id,
@@ -43,13 +50,12 @@ function addToCart(element) {
 
 
 function addToCartDetalle(flower) {
-	// Extraer la información del objeto flower
 	const id = flower._id;
 	const name = flower.Nombre;
 	const price = flower.Precio;
 	const quantity = 1 // Obtiene la cantidad desde el DOM
 
-	// Crear el objeto de item del carrito
+
 	const cartItem = {
 		id,
 		name,
@@ -57,7 +63,6 @@ function addToCartDetalle(flower) {
 		quantity
 	};
 
-	// Obtener carrito actual
 	let cartArray = [];
 	if (localStorage.getItem('compra')) {
 		cartArray = JSON.parse(localStorage.getItem('compra'));
@@ -73,8 +78,6 @@ function addToCartDetalle(flower) {
 			cartArray.push(cartItem);
 		}
 	} else {
-		// Nuevo carrito
-		// Agregar item
 		cartArray.push(cartItem);
 	}
 
@@ -109,6 +112,13 @@ function removeCartItem(idFlor) {
 function updateCartItemQty(element) {
 	var idLibro = element.dataset.id
 	var quantity = element.value
+
+
+	if (quantity < 0 || isNaN(quantity)) {
+		$.notify("Cantidad Inválida, Porfavor coloque bien la cantidad", "warn");
+		return;
+	}
+
 	var cartArray = JSON.parse(localStorage.getItem('compra'))
 	if (cartArray) {
 		let itemIndex = cartArray.findIndex((obj) => obj.id == idLibro);
@@ -124,6 +134,13 @@ function updateCartItemQty(element) {
 function updateCartItemQtyConAjax(element) {
 	var idLibro = element.dataset.id;
 	var quantity = element.value;
+
+
+	if (quantity < 0 || isNaN(quantity)) {
+		$.notify("Cantidad Inválida, Porfavor coloque bien la cantidad", "warn");
+		return;
+	}
+
 	var cartArray = JSON.parse(localStorage.getItem('compra'));
 
 	if (cartArray) {
@@ -259,16 +276,31 @@ function finalizarCompra() {
 
 
 $(document).on('click', '.finalizarCompra', function () {
-	if (!$('#envioPostal').is(':checked') && !$('#recogidaTienda').is(':checked')) {
+
+	const scheme = $('#simulate-payment').attr('data-scheme');
+	const issuer = $('#simulate-payment').attr('data-issuer');
+	const compra = localStorage.getItem('compra');
+
+// Verificar si `compra` es null, una cadena vacía, o un arreglo vacío
+if (!compra || compra.trim() === "[]" || compra.trim() === "") {
+    $.notify("Por favor, seleccione algún producto para finalizar su compra", "warn");
+    return false;
+}
+
+
+	else if (!$('#envioPostal').is(':checked') && !$('#recogidaTienda').is(':checked')) {
 		$.notify("Por favor, seleccione un método de envío", "warn");
 		return false;
+
 	} else if (!$('#tarjeta').is(':checked') && !$('#efectivo').is(':checked')) {
 		$.notify("Por favor, seleccione un método de pago", "warn");
 		return false;
 	}
-	else if (!localStorage.getItem('compra')) {
-		$.notify("Por favor, seleccione un algún producto para finalizar su compra", "warn");
+
+	else if (scheme.trim() === "" && issuer.trim() === "" && $('#tarjeta').is(':checked')) {
+		$.notify("Por favor, verifique su tarjeta antes de finalizar la compra", "warn");
 		return false;
+
 	} else {
 		finalizarCompra();
 

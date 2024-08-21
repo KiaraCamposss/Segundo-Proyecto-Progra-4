@@ -24,7 +24,7 @@
         </div>
         <div class="logo">
 
-          <h1 class="Logo"><a href="/">Satokibi Crochet</a></h1>
+          <h1 class="Logo"><a href="index.html">Satokibi Crochet</a></h1>
         </div>
         <div class="icons">
           <a href="contacto.html"> <i class="fa-solid fa-user"></i></a>
@@ -79,7 +79,7 @@
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12">
           <div class="card card-registration card-registration-2" style="border-radius: 15px; ">
-            <div class="card-body p-0" style="height: 700px;">
+            <div class="card-body p-0" >
               <div class="row g-0">
                 <div class="col-lg-12">
                   <div class="p-5">
@@ -175,78 +175,82 @@
           <fieldset class="row mb-3">
             <legend>Seleccione su envío:</legend>
             <div class="col-sm-10">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="envio" id="envioPostal" value="Envío Postal">
-                    <label class="form-check-label" for="envioPostal">
-                        Envío Postal
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="envio" id="recogidaTienda" value="Recogida en tienda" >
-                    <label class="form-check-label" for="recogidaTienda">
-                        Recogida en tienda
-                    </label>
-                </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="envio" id="envioPostal" value="Envío Postal">
+                <label class="form-check-label" for="envioPostal">
+                  Envío Postal
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="envio" id="recogidaTienda"
+                  value="Recogida en tienda">
+                <label class="form-check-label" for="recogidaTienda">
+                  Recogida en tienda
+                </label>
+              </div>
             </div>
-        </fieldset>
-        
-        <fieldset class="row mb-3">
-          <legend>Seleccione su método de pago:</legend>
-          <div class="col-sm-10">
+          </fieldset>
+
+          <fieldset class="row mb-3">
+            <legend>Seleccione su método de pago:</legend>
+            <div class="col-sm-10">
               <div class="form-check">
-                  <input class="form-check-input" type="radio" name="medioPago" id="efectivo" value="Efectivo">
-                  <label class="form-check-label" for="flexRadioDefault1">
-                      Efectivo
-                  </label>
+                <input class="form-check-input" type="radio" name="medioPago" id="efectivo" value="Efectivo">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Efectivo
+                </label>
               </div>
               <div class="form-check">
-                  <input class="form-check-input" type="radio" name="medioPago" id="tarjeta" value="Tarjeta">
-                  <label class="form-check-label" for="flexRadioDefault2">
-                      Tarjeta
-                  </label>
+                <input class="form-check-input" type="radio" name="medioPago" id="tarjeta" value="Tarjeta">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Tarjeta
+                </label>
               </div>
+            </div>
+          </fieldset>
+
+          <!-- Campos de la tarjeta -->
+          <div id="card-fields" class="row">
+            <div class="col-4">
+              <label for="card-number">Número de Tarjeta:</label>
+              <input type="text" style="font-size: 1.5rem;" id="card-number" class="form-control" name="card-number"
+                placeholder="1234 5678 9012 3456" required>
+            </div>
+            <div class="col-4">
+              <label for="card-expiry">Fecha de Expiración:</label>
+              <input type="text" style="font-size: 1.5rem;" id="card-expiry" class="form-control" name="card-expiry"
+                placeholder="MM/AA" required>
+            </div>
+            <div class="col-4">
+              <label for="card-cvc">CVC:</label>
+              <input type="text" style="font-size: 1.5rem;" id="card-cvc" class="form-control" name="card-cvc"
+                placeholder="123" required>
+            </div>
+            <div class="col-4">
+              <label for="card-tipo">Tipo de tarjeta:</label>
+              <div id="card-logo" style="margin-left: 5%;">
+                <img src="https://i0.wp.com/clubdecompras.tv/wp-content/uploads/2020/05/logo-pago-tarjeta-1.png?ssl=1"
+                  alt="Posible" width="100">
+              </div>
+            </div>
+            <div class="col-4">
+              <label for="card-number">Banco:</label>
+              <input style="font-size: 1.5rem;" type="text" id="card-banco" class="form-control" name="card-number"
+                placeholder="Nombre del banco" readonly>
+            </div>
+
+
+            <div class="col-12" style="text-align: center;">
+              <button type="button" id="simulate-payment" data-scheme="" data-issuer="">
+                Verificar Tarjeta
+              </button>
+            </div>
+
           </div>
-      </fieldset>
-        
-        <!-- Campos de la tarjeta -->
-        <div id="card-fields" class="row">
-            <div class="col-4">
-                <label for="card-number">Número de Tarjeta:</label>
-                <input type="text" style="font-size: 1.5rem;" id="card-number" class="form-control" name="card-number"
-                    placeholder="1234 5678 9012 3456" required>
-            </div>
-            <div class="col-4">
-                <label for="card-expiry">Fecha de Expiración:</label>
-                <input type="text" style="font-size: 1.5rem;" id="card-expiry" class="form-control" name="card-expiry"
-                    placeholder="MM/AA" required>
-            </div>
-            <div class="col-4">
-                <label for="card-cvc">CVC:</label>
-                <input type="text" style="font-size: 1.5rem;" id="card-cvc" class="form-control" name="card-cvc"
-                    placeholder="123" required>
-            </div>
-            <div class="col-4">
-                <label for="card-tipo">Tipo de tarjeta:</label>
-                <div id="card-logo" style="margin-left: 5%;">
-                    <img src="https://i0.wp.com/clubdecompras.tv/wp-content/uploads/2020/05/logo-pago-tarjeta-1.png?ssl=1"
-                        alt="Posible" width="100">
-                </div>
-            </div>
-            <div class="col-4">
-                <label for="card-number">Banco:</label>
-                <input style="font-size: 1.5rem;" type="text" id="card-banco" class="form-control" name="card-number"
-                    placeholder="Nombre del banco" readonly>
-            </div>
-        </div>
-        
 
 
-        <div class="col-12" style="text-align: center;">
-          <button type="button" id="simulate-payment"
-            style="width: 350px; height: 4rem; background-color: #7c675b; color: #fff; border: 2px solid #7c675b; font-size: 2rem; cursor: pointer;">
-            Verificar Tarjeta
-          </button>
-        </div>
+
+
       </form>
       <hr style="padding-bottom: 2%;">
 
@@ -256,11 +260,11 @@
 
     <div class="d-grid gap-2" style="justify-content: center; margin: 3% 3%;">
       <button class="btn btn-primary finalizarCompra" type="button"
-          style="font-size: 2.5rem; width: 450px; background-color: #b28382; border-color: #b28382; font-weight: bold; margin-top: 6%;">
-          Finalizar Compra
+        style="font-size: 2.5rem; width: 450px; background-color: #b28382; border-color: #b28382; font-weight: bold; margin-top: 6%;">
+        Finalizar Compra
       </button>
-  </div> 
-  
+    </div>
+
   </main>
 
 

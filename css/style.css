@@ -653,11 +653,11 @@ body {
     }
 
     #cajasCambiosDevo .card-title {
-        font-size: 1.25rem; /* Tamaño de fuente más pequeño para el título */
+        font-size: 1.25rem; 
     }
 
     #cajasCambiosDevo .card-text {
-        font-size: 0.875rem; /* Tamaño de fuente más pequeño para el texto */
+        font-size: 0.875rem; 
     }
 }
 
@@ -697,6 +697,51 @@ body {
     font-size: 1em; 
 }
 
+
+/*Tarjeta*/
+#card-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+#card-fields .col-4 {
+    flex: 1 1 24%;
+}
+#simulate-payment {
+    width: 350px;
+    height: 4rem;
+    background-color: #7c675b;
+    color: #fff;
+    border: 2px solid #7c675b;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 2%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 600px) {
+    #card-fields {
+        flex-direction: row;
+        flex-wrap: wrap; 
+    }
+
+    #card-fields .col-4 {
+        flex: 1 1 24%; 
+    }
+
+    #simulate-payment {
+        width: 200px; 
+        height: 3rem; 
+        font-size: 1.5rem; 
+    }
+}
+
+
+
+
+/*Factura*/
 
 #factura h2 {
     border-style: solid;
