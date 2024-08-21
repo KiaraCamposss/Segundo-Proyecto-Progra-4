@@ -65,7 +65,7 @@ function addToCartDetalle(flower) {
 
 	if (cartArray.length > 0) {
 		const itemIndex = cartArray.findIndex((obj) => obj.id == cartItem.id);
-		// Si existe en los items del carrito
+		// Si existe en los items del carritoo
 		if (itemIndex !== -1) {
 			cartArray[itemIndex].quantity += cartItem.quantity;
 		} else {
