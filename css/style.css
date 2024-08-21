@@ -540,18 +540,14 @@ body {
 
     .redesSociales {
         flex-direction: column;
-        /* Añadido */
         align-items: center;
-        /* Añadido */
     }
 
     .redesSociales div {
         width: 100%;
-        /* Ajustado */
         max-width: 300px;
-        /* Ajustado */
         margin-bottom: 20px;
-        /* Ajustado */
+      
     }
 
     .redesSociales div i {
@@ -621,6 +617,48 @@ body {
 
 #cajasCambiosDevo div img {
     width: 10rem;
+}
+
+@media screen and (max-width: 600px) {
+    #cajasCambiosDevo .card {
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 0;
+    }
+
+
+
+    #cajasCambiosDevo .card-body {
+        padding: 1rem;
+    }
+
+    #cajasCambiosDevo .card-title {
+        font-size: 1.25rem; 
+    }
+
+    #cajasCambiosDevo .card-text {
+        font-size: 0.875rem; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #cajasCambiosDevo .card {
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 0;
+    }
+
+    #cajasCambiosDevo .card-body {
+        padding: 1rem;
+    }
+
+    #cajasCambiosDevo .card-title {
+        font-size: 1.25rem; /* Tamaño de fuente más pequeño para el título */
+    }
+
+    #cajasCambiosDevo .card-text {
+        font-size: 0.875rem; /* Tamaño de fuente más pequeño para el texto */
+    }
 }
 
 
