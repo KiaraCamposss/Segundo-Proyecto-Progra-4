@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="navbar-top">
+        <div class="customer">
+          <i class="fa-solid fa-headset"></i>
+          <div class="container-customer">
+            <span>Pedidos</span>
+            <span>8756-9072</span>
+          </div>
+        </div>
+        <div class="logo">
+
+          <h1 class="Logo"><a href="/">Satokibi Crochet</a></h1>
+        </div>
+        <div class="icons">
+          <a href="contacto.html"> <i class="fa-solid fa-user"></i></a>
+          <a href="carrito.html"><i class="fa-solid fa-basket-shopping"></i></a>
+          <div class="content-shopping"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navegador">
+      <nav class="navbar navbar-expand-lg navbar-custom" data-bs-theme="dark">
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="#" id="loguito"> <img src="./img/logopequeño.jpg" alt="loguito"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link " href="index.html">Inicio
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="Productos.html">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="preguntasFrecuentes.html">Preguntas Frecuentes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="AcercaDe.html">Acerca de</a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+  </header>
+
+
+  <main class="container-fluid p-3">
+
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12">
+          <div class="card card-registration card-registration-2" style="border-radius: 15px; ">
+            <div class="card-body p-0" style="height: 700px;">
+              <div class="row g-0">
+                <div class="col-lg-12">
+                  <div class="p-5">
+                    <div class="d-flex justify-content-between align-items-center mb-5">
+                      <h1 class="fw-bold mb-0">Compra</h1>
+                      <h6 class="fw-bold mb-0" id="total-items">3 items(s)</h6>
+                    </div>
+                    <hr class="my-4">
+                    <div class="row mb-4 d-flex justify-content-between text-primary">
+                      <div class="col-md-3 col-lg-3 col-xl-3">
+                        <h6 class="fw-bold">Producto</h6>
+                      </div>
+                      <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                        <h6 class="fw-bold">Cantidad</h6>
+                      </div>
+                      <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                        <h6 class="fw-bold">Precio</h6>
+                      </div>
+                      <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                        <h6 class="fw-bold">Subtotal</h6>
+                      </div>
+                      <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+
+                      </div>
+                    </div>
+                    <hr class="my-4">
+                    <div id="detail">
+                      <!--Inicio Item -->
+                      <div class="row mb-4 d-flex justify-content-between align-items-center">
+                        <div class="col-md-3 col-lg-3 col-xl-3">
+                          <h6 class="text-muted name-libro">Libro</h6>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+
+                          <input min="0" name="quantity" value="1" type="number"
+                            class="form-control form-control-sm quantity-libro" />
+
+                        </div>
+                        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                          <h6 class="mb-0 price-libro">&dollar; 15.00</h6>
+                        </div>
+                        <div class="col-md-1 col-lg-1 col-xl-1 ">
+                          <button type="button" class="btn btn-secondary"><i class="bi bi-trash"></i></button>
+                        </div>
+                        <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                          <h6 class="mb-0 subtotal-libro">&dollar; 15.00</h6>
+                        </div>
+                      </div>
+                      <hr class="my-4">
+                      <!--Fin Item -->
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3 col-lg-2 col-xl-7 offset-lg-1 text-end">
+                        <h5 class="mb-0">Total</h5>
+                      </div>
+                      <div class="col-md-3 col-lg-2 col-xl-3 offset-lg-1">
+                        <h5 class="mb-0" id="total-compra">&dollar;15.00</h5>
+                      </div>
+                    </div>
+
+
+                    <div class="pt-5">
+                      <h6 class="mb-0"><a href="Productos.html" class="text-body"><i
+                            class="fas fa-long-arrow-alt-left me-2"></i>Regresar a
+                          comprar</a></h6>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container-fluid p-4" style="background-color: #fff; width: 90%; border-radius: 2%; border-color: #000;">
+      <form method="post" id="payment" name="formulario" class="row gy-2 gx-3 align-items-center"
+        style="font-size: 2rem;">
+        <input type="hidden" id="identificador" name="identificador" value="0">
+        <fieldset class="mb-3 row g-3">
+          <legend
+            style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 3.5rem; color: #7c675b; font-weight: bold;">
+            Información de compra
+          </legend>
+          <hr style="padding-bottom: 2%;">
+
+
+          <fieldset class="row mb-3">
+            <legend>Seleccione su envío:</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="envio" id="envioPostal" value="Envío Postal">
+                    <label class="form-check-label" for="envioPostal">
+                        Envío Postal
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="envio" id="recogidaTienda" value="Recogida en tienda" >
+                    <label class="form-check-label" for="recogidaTienda">
+                        Recogida en tienda
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        
+        <fieldset class="row mb-3">
+          <legend>Seleccione su método de pago:</legend>
+          <div class="col-sm-10">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="medioPago" id="efectivo" value="Efectivo">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                      Efectivo
+                  </label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="medioPago" id="tarjeta" value="Tarjeta">
+                  <label class="form-check-label" for="flexRadioDefault2">
+                      Tarjeta
+                  </label>
+              </div>
+          </div>
+      </fieldset>
+        
+        <!-- Campos de la tarjeta -->
+        <div id="card-fields" class="row">
+            <div class="col-4">
+                <label for="card-number">Número de Tarjeta:</label>
+                <input type="text" style="font-size: 1.5rem;" id="card-number" class="form-control" name="card-number"
+                    placeholder="1234 5678 9012 3456" required>
+            </div>
+            <div class="col-4">
+                <label for="card-expiry">Fecha de Expiración:</label>
+                <input type="text" style="font-size: 1.5rem;" id="card-expiry" class="form-control" name="card-expiry"
+                    placeholder="MM/AA" required>
+            </div>
+            <div class="col-4">
+                <label for="card-cvc">CVC:</label>
+                <input type="text" style="font-size: 1.5rem;" id="card-cvc" class="form-control" name="card-cvc"
+                    placeholder="123" required>
+            </div>
+            <div class="col-4">
+                <label for="card-tipo">Tipo de tarjeta:</label>
+                <div id="card-logo" style="margin-left: 5%;">
+                    <img src="https://i0.wp.com/clubdecompras.tv/wp-content/uploads/2020/05/logo-pago-tarjeta-1.png?ssl=1"
+                        alt="Posible" width="100">
+                </div>
+            </div>
+            <div class="col-4">
+                <label for="card-number">Banco:</label>
+                <input style="font-size: 1.5rem;" type="text" id="card-banco" class="form-control" name="card-number"
+                    placeholder="Nombre del banco" readonly>
+            </div>
+        </div>
+        
+
+
+        <div class="col-12" style="text-align: center;">
+          <button type="button" id="simulate-payment"
+            style="width: 350px; height: 4rem; background-color: #7c675b; color: #fff; border: 2px solid #7c675b; font-size: 2rem; cursor: pointer;">
+            Verificar Tarjeta
+          </button>
+        </div>
+      </form>
+      <hr style="padding-bottom: 2%;">
+
+    </div>
+
+
+
+    <div class="d-grid gap-2" style="justify-content: center; margin: 3% 3%;">
+      <button class="btn btn-primary finalizarCompra" type="button"
+          style="font-size: 2.5rem; width: 450px; background-color: #b28382; border-color: #b28382; font-weight: bold; margin-top: 6%;">
+          Finalizar Compra
+      </button>
+  </div> 
+  
+  </main>
+
+
+  <footer class="text-dark pt-5 pb-4" style="background-color: #7c675b !important; color: white !important;">
+    <div class="container text-center text-md-start">
+      <div class="row text-center text-md-start">
+
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
+          <hr class="mb-4">
+          <p style="color: white !important;">Somos un emprendimiento que motiva a las personas a crear momentos
+            inolvidables a través de detalles hechos a mano.
+            Promovemos el valor del amor, tiempo y dedicación en cada obsequio que creamos. Visualizamos
+            nuestro emprendimiento como una forma de fortalecer vínculos y regalar momentos memorables.</p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Contacto</h5>
+          <hr class="mb-4">
+          <p style="color: white !important;">
+            <li class="fas fa-home me"></li> Naranjo Centro, Alajuela
+          </p>
+          <p style="color: white !important;">
+            <li class="fas fa-phone me"></li> 8756-9072
+          </p>
+          <p style="color: white !important;">
+            <li class="fas fa-envelope me"></li> satokibicrochet@gmail.com
+          </p>
+          <p style="color: white !important;">
+            <i class="fa-solid fa-heart"></i> Hecho a mano
+          </p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Dejanos ayudarte</h5>
+          <hr class="mb-4">
+          <p><a href="carrito.html" style="color: white !important;">Carrito</a></p>
+          <p><a href="cambiosDevoluciones.html" style="color: white !important;">Cambios y devoluciones</a></p>
+          <p><a href="contacto.html" style="color: white !important;">Ayuda</a></p>
+        </div>
+
+        <hr class="mb-4">
+
+        <div class="text-center mb-2">
+          <p style="color: white !important;">
+            Copyright Todos los derechos reservados
+            <a href="#" style="color: white !important;"><strong>Satokibi Crochet</strong></a>
+          </p>
+        </div>
+
+        <div class="text-center">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/satokibi_crochet/" style="color: white !important;"><i
+                  class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/profile.php?id=100091970546866" style="color: white !important;"><i
+                  class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?phone=%2B50687569072" style="color: white !important;"><i
+                  class="fa-brands fa-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- JQuery-->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" crossorigin="anonymous"></script>
+  <!-- https://notifyjs.jpillora.com/-->
+  <script src="../JS/notify.min.js"></script>
+  <script src="https://kit.fontawesome.com/84fa7f3b14.js" crossorigin="anonymous"></script>
+
+  <!-- código JavaScript personalizado -->
+  <script src="./JS/compra.js"></script>
+  <script src="./JS/carrito.js"></script>
+  <script src="./JS/medioPago.js"></script>
+
+</body>
+
+</html>

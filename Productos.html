@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="navbar-top">
+        <div class="customer">
+          <i class="fa-solid fa-headset"></i>
+          <div class="container-customer">
+            <span>Pedidos</span>
+            <span>8756-9072</span>
+          </div>
+        </div>
+        <div class="logo">
+
+          <h1 class="Logo"><a href="/">Satokibi Crochet</a></h1>
+        </div>
+        <div class="icons">
+          <a href="contacto.html"> <i class="fa-solid fa-user"></i></a>
+          <a href="carrito.html"><i class="fa-solid fa-basket-shopping"></i></a>
+          <div class="content-shopping"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navegador">
+      <nav class="navbar navbar-expand-lg navbar-custom" data-bs-theme="dark">
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="#" id="loguito"> <img src="./img/logopequeño.jpg" alt="loguito"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link " href="index.html">Inicio
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="Productos.html">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="preguntasFrecuentes.html">Preguntas Frecuentes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="AcercaDe.html">Acerca de</a>
+              </li>
+        
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+  </header>
+
+
+  <main class="container-fluid p-3">
+
+    <div class="mb-3">
+      <label for="filter">Filtrar por Tamaño:</label>
+      <select id="filter" class="form-select">
+        <option value="all">Todos</option>
+        <!-- Opciones de categorías se añadirán dinámicamente aquí -->
+      </select>
+    </div>
+
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">¡Recuerda!</h4>
+      <hr>
+      <p class="mb-0">Si deseas crear un ramo personalizado añade las flores que más te gusten al carrito, cuando ya
+        hayas elegido las que quieres realiza la compra.</p>
+    </div>
+
+
+    <div id="flower-list" class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      <!--Inicio Libro-->
+      <div class="col">
+        <div class="card shadow-sm text-center">
+          <div class="card-header">
+            <h4 class="card-title">Título Libro</h4>
+          </div>
+          <img class="card-img-top" style="max-height:460px;" role="img" src="./img/image-not-found.jpg"
+            alt="Imagen" />
+          <div class="card-body">
+            <p class="card-title">Tiempos de entrega:</p>
+            <h1 class="card-title">&#8353;100000</h1>
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-success"><i class="bi bi-cart-plus"></i>Añadir al carrito</button>
+              <button type="button" class="btn btn-lg btn-primary">Detalle</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--Fin Libro-->
+    </div>
+  </main>
+
+  <footer class="text-dark pt-5 pb-4" style="background-color: #7c675b !important; color: white !important;">
+    <div class="container text-center text-md-start">
+      <div class="row text-center text-md-start">
+
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Nosotros</h5>
+          <hr class="mb-4">
+          <p style="color: white !important;">Somos un emprendimiento que motiva a las personas a crear momentos
+            inolvidables a través de detalles hechos a mano.
+            Promovemos el valor del amor, tiempo y dedicación en cada obsequio que creamos. Visualizamos
+            nuestro emprendimiento como una forma de fortalecer vínculos y regalar momentos memorables.</p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Contacto</h5>
+          <hr class="mb-4">
+          <p style="color: white !important;">
+            <li class="fas fa-home me"></li> Naranjo Centro, Alajuela
+          </p>
+          <p style="color: white !important;">
+            <li class="fas fa-phone me"></li> 8756-9072
+          </p>
+          <p style="color: white !important;">
+            <li class="fas fa-envelope me"></li> satokibicrochet@gmail.com
+          </p>
+          <p style="color: white !important;">
+            <i class="fa-solid fa-heart"></i> Hecho a mano
+          </p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-primary">Dejanos ayudarte</h5>
+          <hr class="mb-4">
+          <p><a href="carrito.html" style="color: white !important;">Carrito</a></p>
+          <p><a href="cambiosDevoluciones.html" style="color: white !important;">Cambios y devoluciones</a></p>
+          <p><a href="contacto.html" style="color: white !important;">Ayuda</a></p>
+        </div>
+
+        <hr class="mb-4">
+
+        <div class="text-center mb-2">
+          <p style="color: white !important;">
+            Copyright Todos los derechos reservados
+            <a href="#" style="color: white !important;"><strong>Satokibi Crochet</strong></a>
+          </p>
+        </div>
+
+        <div class="text-center">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/satokibi_crochet/" style="color: white !important;"><i
+                  class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/profile.php?id=100091970546866" style="color: white !important;"><i
+                  class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://api.whatsapp.com/send?phone=%2B50687569072" style="color: white !important;"><i
+                  class="fa-brands fa-whatsapp"></i></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- JQuery-->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+     <!-- Notificaciones-->
+    <script src="./JS/notify.min.js"></script>
+
+     <!-- Mis JS-->
+  <script src="./JSON/Flores.js"></script>
+  <script src="./JS/listaFlores.js"></script>
+  <script src="./JS/compra.js"></script>
+
+
+   <!-- Logos-->
+  <script src="https://kit.fontawesome.com/84fa7f3b14.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

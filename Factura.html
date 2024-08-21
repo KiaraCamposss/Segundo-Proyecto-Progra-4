@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" style=" margin: 0; padding: 0;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factura</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+
+
+
+
+
+  <main class="container-fluid p-3" style="margin-top: 5%;  margin-bottom: 5%;">
+    <div class="invoice-container" id="factura">
+      <div class="invoice-header">
+        <div class="title-date">
+          <h1>Satokibi Crochet <img src="./img/logopequeño.jpg" alt="loguito"></h1>
+          <h2 class="title">Factura </h2>
+          <p id="date"><b>Fecha: </b></p>
+        </div>
+        <div class="space"></div>
+        <p class="invoice-number"><b>Número: </b>#01</p>
+        <div class="space"></div>
+        <p class="invoice-number" id="envioSeleccionado"><b>Envío: </b></p>
+        <div class="space"></div>
+        <p class="invoice-number" id="pagoSeleccionado"><b>Método de pago: </b></p>
+      </div>
+      <div class="invoice-body">
+
+        <table class="table table-striped table-bordered">
+          <thead class="table-dark">
+            <th style="padding-left:12px;">Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Subtotal</th>
+            <th style="text-align: right;">
+
+            </th>
+          </thead>
+
+          <tbody id="contenido-factura" class="table-group-divider">
+            <tr class="fila-factura">
+              <td><input type="text" placeholder="Nombre Producto" class="form-control" readonly></td>
+              <td><input type="number" placeholder="0" name="cantidad[0]" class="form-control cantidad" readonly></td>
+              <td><input type="number" placeholder="0" name="precio[0]" class="form-control precio" readonly></td>
+              <td><input type="number" placeholder="0" name="subtotal[]" class="form-control subtotal" readonly></td>
+              <td style="text-align: right;">
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <td colspan="3">
+              <p class="text-body-emphasis text-end">Total</p>
+            </td>
+            <td colspan="2">
+              <div id="sum"><input type="text" placeholder="0.00" name="total" class="form-control" id="total" readonly style="font-size: 1.5rem;">
+              </div>
+            </td>
+          </tfoot>
+        </table>
+
+
+      
+        <hr style="padding-bottom: 2%;">
+        <h3 class="title" >¡Gracias por tu compra! <i class="fa-solid fa-heart"></i> </h3>
+
+      </div>
+    </div>
+    
+
+    <div class="pt-5" >
+      <h6 class="mb-0"  style="font-size: 3rem;"><a href="Productos.html" class="text-body"><i
+            class="fas fa-long-arrow-alt-left me-2"></i>Regresar a
+          comprar</a></h6>
+    </div>
+
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- JQuery-->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" crossorigin="anonymous"></script>
+  <!-- https://notifyjs.jpillora.com/-->
+  <script src="../JS/notify.min.js"></script>
+  <script src="https://kit.fontawesome.com/84fa7f3b14.js" crossorigin="anonymous"></script>
+
+  <!-- código JavaScript personalizado -->
+  <script src="./JS/compra.js"></script>
+  <script src="./JS/factura.js"></script>
+</body>
+
+</html>
