@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var chartDom = document.getElementById('miGrafico');
     var myChart = echarts.init(chartDom);
 
-    fetch('../json/grafico.json') //Solicitar archivo JSON 
+    fetch('./json/grafico.json') //Solicitar archivo JSON 
 
         .then(response => response.json())  //Convierte la respuesta de fetch en un JSON
         
